@@ -1,15 +1,16 @@
 var express = require('express');
 var path = require('path');
-var app = express();
 
-app.get('/', function(req, res) {
+var router = express.Router();
+
+router.get('/', function(req, res) {
     if (req.query.time) {
         res.set({
             "Content-Type": "application/json"
         });
         // see if input is number or not
         if (!isNaN(Number(req.query.time))) {
-            req.query.time = Number(req.query.time) * 1000; // unix counts in seconds.
+            req.query.time = Number(req.query.time) * 1000; // unix counts in seconds
         }
 
         var parsedTime = new Date(req.query.time),
@@ -34,7 +35,4 @@ app.get('/', function(req, res) {
     }
 });
 
-app.listen(8080, function(err) {
-    if (err) throw err;
-    console.log("server is running");
-});
+module.exports = router;
