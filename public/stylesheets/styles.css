@@ -1,0 +1,34 @@
+html, body {
+    box-sizing: border-box;
+}
+
+html {
+    background: #fff;
+}
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3% 5%;
+    background: #eee;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 100%;
+    font-family: "PT Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.heading {
+    margin: 0;
+}
+
+.profile-link {
+    font-size: 1em;
+}
