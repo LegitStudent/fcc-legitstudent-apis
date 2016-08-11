@@ -1,6 +1,6 @@
 {
   "name": "fcc-api-legitstudent",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "A timestamp microservice.",
   "main": "app.js",
   "scripts": {
