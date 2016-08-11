@@ -3,7 +3,7 @@ html, body {
 }
 
 html {
-    background: #fff;
+    background: #114B5F;
 }
 
 body {
@@ -16,6 +16,10 @@ body {
     font-family: "PT Sans", sans-serif;
 }
 
+h2 {
+    color: #456990;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -26,7 +30,8 @@ a:hover {
 }
 
 .heading {
-    margin: 0;
+    margin: 0 0 2%;
+    color: #028090;
 }
 
 .profile-link {
