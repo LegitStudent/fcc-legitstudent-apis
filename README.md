@@ -1,2 +1,4 @@
-# All my FCC solutions for the API projects
+# LegitStudent Gallery of Assorted APIs
+
+A repository containing all of my solutions for the FreeCodeCamp API projects.
 
