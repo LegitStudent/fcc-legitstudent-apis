@@ -1,14 +1,99 @@
 <!doctype html>
 <html>
     <head>
-        <title>Timestamp Microservice - Home</title>
+        <title>LSGOAA</title>
+        <link rel="stylesheet" href="public/stylesheets/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     </head>
     <body>
-        <h1>Timestamp Microservice</h1>
-        <p>Make a GET request to: <br>
-            <code>
-                /?time=[insert time string here]
-            </code>
-        </p>
+        <header>
+            <h1 class="heading">Welcome to the LegitStudent Gallery of Assorted APIs! </h1>
+            <a href="https://github.com/LegitStudent" class="profile-link">
+                Who is LegitStudent?</a>
+            <hr>
+            
+            <nav>
+                <h2>Our current list of oddities:</h2>
+                <ul>
+                    <a href="#timestamp"><li>Timestamp Microservice</li></a>
+                    <a href="#request"><li>Request Header Parser Microservice</li></a>
+                </ul>
+            </nav>
+        </header>
+        
+        <hr>
+        
+        <main>
+            <h2>API Usage</h2>
+            <article id="timestamp">
+                <h2><a>#</a> Timestamp Microservice</h2>
+                
+                <p class="endpoint"><b>API Endpoint:</b><code>
+                    /timestamp
+                </code></p>
+                
+                <h3>Possible Actions to Endpoint</h3>
+                <p class="http-action">GET request to
+                    <code>/?time=[time string]</code>,
+                    where [time string] is a timestamp with a UNIX or 
+                    Natural (MMMM DD, YYYY) format.
+                </p>
+                
+                <p class="expected-response">
+                    <b>Expected response:</b> A JSON object that display given time
+                    string in both UNIX and Natural time.
+                </p>
+                
+                <code class="example">
+                    { "unix": 1450137600, "natural": "December 15, 2015" }
+                </code>
+            </article>
+            <article id="">
+                <h2><a>#</a> Request Header Parser Microservice</h2>
+                
+                <p class="endpoint">API Endpoint: <code>
+                    /request
+                </code></p>
+            
+                <h3>Possible Actions to Endpoint</h3>
+                <p class="http-action">GET request to
+                    <code>/</code>
+                </p>
+                
+                <p class="expected-response">
+                    <b>Expected response:</b> A JSON object that shows the
+                    IP address, language, and operating system of the browser/
+                    application that made the request.
+                </p>
+                
+                <code class="example">
+                    {"ipaddress":"127.0.0.1","language":"en-GB","software":"Windows NT 10.0; WOW64"}
+                </code>
+                    
+            </article>
+            
+            <!-- Template for more APIs in the future -->
+            <template class="article-template">
+                <h2><a>#</a> Title</h2>
+                
+                <p class="endpoint"><b>API Endpoint:</b><code>
+                    /endpoint
+                </code></p>
+                
+                <h3>Possible Actions to Endpoint</h3>
+                <p class="http-action">GET request to
+                    <code>/?query=[var]</code>,
+                    where [var] is...
+                </p>
+                
+                <p class="expected-response">
+                    <b>Expected response:</b> A JSON object that...
+                </p>
+                
+                <code class="example">
+                    { "key": "value" }
+                </code>
+            </template>
+        </main>
     </body>
 </html>
