@@ -1,12 +1,11 @@
-var express = require('express');
-var app = express();
+// Request Header Parser API
 
-app.get('/', function(req, res) {
+module.exports = function(req, res) {
     var parsedHeaders = {
         ipaddress: "",
         language: "",
         os: ""
-    }
+    };
     
     parsedHeaders['ipaddress'] = req.headers['x-forwarded-for'];
     parsedHeaders['language'] = req.headers['accept-language'];
@@ -16,6 +15,4 @@ app.get('/', function(req, res) {
 
     res.set('Content-Type', 'application/json');
     res.status(200).json(parsedHeaders);
-});
-
-app.listen(8080);
+};
