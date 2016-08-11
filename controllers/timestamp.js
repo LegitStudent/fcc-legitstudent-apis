@@ -1,9 +1,8 @@
-var express = require('express');
+// Timestamp API
+
 var path = require('path');
 
-var router = express.Router();
-
-router.get('/', function(req, res) {
+module.exports = function(req, res) {
     if (req.query.time) {
         res.set({
             "Content-Type": "application/json"
@@ -19,7 +18,7 @@ router.get('/', function(req, res) {
         
         if (!isNaN(parsedTime.getTime())) {
             // valid dates go here.
-            unixTime = parsedTime.getTime();
+            unixTime = parsedTime.getTime() / 1000;
             naturalTime = parsedTime.toDateString().slice(4);
         }
         
@@ -27,12 +26,10 @@ router.get('/', function(req, res) {
             "unix": unixTime,
             "natural": naturalTime
         });
-        res.end();
     }
     else {
     // send instructions
-        res.sendFile(path.join(__dirname, 'views/index.html'));
+        res.end('go back, and read the manual');
+    //    res.sendFile(path.join(__dirname, 'views/index.html'));
     }
-});
-
-module.exports = router;
+};
