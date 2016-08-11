@@ -29,7 +29,7 @@ module.exports = function(req, res) {
     }
     else {
     // send instructions
-        res.end('go back, and read the manual');
-    //    res.sendFile(path.join(__dirname, 'views/index.html'));
+    //  res.end('go back, and read the manual');
+    res.redirect(303, '/');
     }
 };
